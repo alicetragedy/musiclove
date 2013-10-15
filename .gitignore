@@ -1,0 +1,10 @@
+
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore these for server config.
+Gemfile.lock
+Gemfile
+config.ru

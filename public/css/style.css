@@ -1,0 +1,8 @@
+/* Put your CSS here */
+html, body {
+    margin: 20px;
+}
+
+.page-header a h1 {
+	color: #555;
+}
