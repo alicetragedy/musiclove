@@ -35,6 +35,11 @@ App.Songs.pushObject(App.Song.create({title: 'Perth', artist: 'Bon Iver', rating
 
 //New Order Songs
 App.Songs.pushObject(App.Song.create({title: 'Bizarre Love Triangle', artist: 'New Order', rating: 4}));
+App.Songs.pushObject(App.Song.create({title: 'Temptation', artist: 'New Order', rating: 4}));
+App.Songs.pushObject(App.Song.create({title: 'Blue Monday', artist: 'New Order', rating: 4}));
+App.Songs.pushObject(App.Song.create({title: 'Ceremony', artist: 'New Order', rating: 4}));
+App.Songs.pushObject(App.Song.create({title: 'Crystal', artist: 'New Order', rating: 4}));
+
 
 //Zola Jesus Songs
 App.Songs.pushObject(App.Song.create({title: 'Skin', artist: 'Zola Jesus', rating: 4}));
@@ -44,6 +49,7 @@ App.Songs.pushObject(App.Song.create({title: 'Lick The Palm Of The Burning Hands
 
 // Joy Division Songs
 App.Songs.pushObject(App.Song.create({title: 'Love Will Tear Us Apart', artist: 'Joy Division', rating: 4}));
+App.Songs.pushObject(App.Song.create({title: 'Leaders of Men', artist: 'Joy Division', rating: 4}));
 
 
 
@@ -120,4 +126,10 @@ App.StarRating = Ember.View.extend({
 		}
 	}
 });
+
+App.ArtistsController = Ember.ArrayController.extend({
+	disabled: function() {
+		return Ember.isEmpty(this.get('newArtist'));
+	}.property('newArtist')
+})
 
